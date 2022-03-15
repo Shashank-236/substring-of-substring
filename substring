@@ -1,0 +1,19 @@
+while(t--)
+{
+string s;
+cin>>s;
+int ans=0;last;
+for(int i=0;i<s.length();i++)
+{
+if(s[i]==s[0] or s[i]==s.back())
+{
+last=i;
+continue;
+}
+ans=max(ans,last-i);
+}
+if(ans==0)
+{
+cout<<"-1"<<endl;
+else{
+cout<<ans;
